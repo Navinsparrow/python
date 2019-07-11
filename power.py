@@ -1,5 +1,5 @@
-n,k=map(int,input().split())
-power=1
-for i in range(1,k+1):
-  power=power*n
-  print(power)
+n=input().split()
+x=int(n[0])
+y=int(n[1])
+z=x**y
+print(z)
