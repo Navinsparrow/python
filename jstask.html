@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p><h1> 🙏 pls open the console 🙏</h1></p>
+
+<script>
+var Arr = [
+    {
+        name: "navin",		
+        age: 21
+    },
+    {
+        name: "pravin",
+         age: 23
+    },
+    {
+        name: "prasanth",
+        age: 14
+    },
+    {
+        name: "goutham",
+        age: 21
+    },
+    {
+        name: "arunkumaran",	
+        age: 21
+    },
+    {
+        name: "sparrow",		
+        age: 15
+    },
+    {
+        name: "kumar",	
+        age: 18
+    },
+    {
+        name: "navin Sparrow",	
+        age: 16
+    },
+    {
+        name: "johnny Depp",	
+        age: 56
+    },
+    {
+        name: "amber Heard",
+        age: 33
+    },
+    ];
+    var e = prompt("enter a letter(in lower case) to see the name which starts with that letter","");
+    
+var arrName = Arr.filter(function (b) {
+      return b.name.startsWith(e);
+})
+console.log(arrName);
+
+
+    var n = prompt("enter the age to be print for example if you want above 18 then type above18 or you want below then type below18 or ypu want equal then type equal18","");    
+    var arrAge = Arr.filter(function(a) {
+if (n=="below18") {
+    return a.age < 18;
+
+}
+else if(n=="above18"){
+    return a.age > 18;
+} 
+else {
+    return a.age==18;    
+
+}});
+console.log(arrAge);
+
+
+</script>
+
+</body>
+</html>
