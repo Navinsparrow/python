@@ -200,4 +200,298 @@ else:
 cc=["a","a","b","b","b","a"]
 dd=[i:cc.count(i) for i in cc]
 print(dd)
-    
+
+# check whether a number is negative, positive or zero.
+num = int (input())
+if num > 0:
+   print("Positive")
+elif num < 0:
+   print("Negative")
+else:
+   print("Zero")
+
+# check whether a number is divisible by 5 and 11 or not. 
+number = int(input())
+if((number % 5 == 0) and (number % 11 == 0)):
+    print("Divisible by 5 and 11".format(number))
+else:
+    print("Not Divisible by 5 and 11".format(number)) 
+
+# check whether a number is even or odd.
+even=int(input("enter the number:"))
+if(even % 2 == 0):
+    print("even")
+else:
+    print("odd")
+
+# check whether a year is leap year or not.
+year = int (input(""))
+
+if((year%400 ==0)or(year%4 ==0)&(year%100!=0)):
+  print("yes")
+else:
+  print("no") 
+
+#   check whether a character is alphabet or not
+li = input("")
+if l in ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'):
+	    print("Alphabet")
+else:
+	    print("No")
+
+# input any alphabet and check whether it is vowel or consonant. 
+lis = input("")
+if l in('a', 'e', 'i', 'o', 'u'):
+	    print("Vowel")
+else:
+	    print("Consonant")
+
+#   input any character and check whether it is alphabet, digit or special character. 
+ch = input("Enter Your letter : ")
+if((ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z')): 
+    print("The Given Character ", ch, "is an Alphabet") 
+elif(ch >= '0' and ch <= '9'):
+    print("The Given Character ", ch, "is a Digit")
+else:
+    print("The Given Character ", ch, "is a Special Character") 
+
+# check whether a character is uppercase or lowercase alphabet.
+chr = input("Enter Your letter : ")
+if(chr.isupper()):
+    print("The Given Character ", chr, "is an Uppercase Alphabet")
+elif(ch.islower()):
+    print("The Given Character ", chr, "is a Lowercase Alphabet")
+else:
+    print("The Given Character ", chr, "is Not a Lower or Uppercase Alphabet")          
+
+# input week number and print weekday
+weekNumber = input("Enter the week number:")
+weekNumber = int(weekNumber)
+if (weekNumber == 1):
+  weekDay = "Saturday"
+elif (weekNumber == 2):
+  weekDay = "Sunday"
+elif (weekNumber == 3):
+  weekDay = "Monday"
+elif (weekNumber == 4):
+  weekDay = "Tuesday"
+elif (weekNumber == 5):
+  weekDay = "Wednesday"
+elif (weekNumber == 6):
+  weekDay = "Thursday"
+elif (weekNumber == 7):
+  weekDay = "Friday"
+else:
+  weekDay = "Please enter the week number between 1 and 7"
+  
+print (weekDay)
+   
+# input month number and print number of days in that month. 
+monthname = input("Input the name of Month: ")
+ if monthname == "February":
+	print("No. of days: 28/29 days")
+elif monthname in ("April", "June", "September", "November"):
+	print("No. of days: 30 days")
+elif monthname in ("January", "March", "May", "July", "August", "October", "December"):
+	print("No. of days: 31 day")
+else:
+	print("Wrong month name") 
+
+# count total number of notes in given amount
+def no_notes(a):
+  r = [500, 200, 100, 50, 20, 10]
+  t = 0
+  for i in range(6):
+    q = r[i]
+    t += int(a / q)
+    a = int(a % q)
+  if a > 0:
+    t = -1
+  return x
+  note=int(input("enter the amount:"))
+print(no_notes(note))
+print(no_notes(note))
+
+# input angles of a triangle and check whether triangle is valid or not.
+c1 = int(input('Please Enter the First Angle of a Triangle: '))
+c2 = int(input('Please Enter the Second Angle of a Triangle: '))
+c3 = int(input('Please Enter the Third Angle of a Triangle: '))
+total = c1 + c2 + c3
+if total == 180:
+    print("\nThis is a Valid Triangle")
+else:
+    print("\nThis is an Invalid Triangle")
+
+# input all sides of a triangle and check whether triangle is valid or not.
+def tri(x, y, z):   
+    if (x + y <= z) or (x + z <= y) or (y + z <= x) : 
+        return False
+    else: 
+        return True            
+a = int(input())
+b = int(input())
+c = int(input())
+if tri(a, b, c): 
+    print("Valid")  
+else: 
+    print("Invalid") 
+
+#  check whether the triangle is equilateral, isosceles or scalene triangle. 
+x = int(input("x: "))
+y = int(input("y: "))
+z = int(input("z: "))
+if x == y == z:
+	print("Equilateral triangle")
+elif x==y or y==z or z==x:
+	print("isosceles triangle")
+else:
+	print("Scalene triangle")
+
+# program to find all roots of a quadratic equation.
+import cmath
+a = float(input('Enter a: '))
+b = float(input('Enter b: '))
+c = float(input('Enter c: '))
+d = (b**2) - (4*a*c)
+e = (-b-cmath.sqrt(d))/(2*a)
+f= (-b+cmath.sqrt(d))/(2*a)
+print(e,f)
+
+# calculate profit or loss
+a = float(input("Enter the Actual Product Price: "))
+b = float(input("Enter the Sales Amount: "))
+ if(a > b):
+    amount = a - b
+    print("Loss Amount = {0}".format(amount))
+elif(b > a):
+    amount = b - a
+    print("Profit Amount = {0}".format(amount))
+else:
+    print("No Profit No Loss!!!")
+
+#   Calculate percentage and grade 
+a=int(input("enter the percentage"))
+if(a>=90):
+    print("grade:A")
+elif(a>=80):      
+    print("grade:B")
+    elif(a>=70):      
+    print("grade:C")
+    elif(a>=60):      
+    print("grade:D")
+    elif(a>=40):      
+    print("grade:E")
+    else:
+        print("grade:F")
+
+# print day of week name using switch case. 
+        def week(i):
+        switcher={
+                1:'Sunday',
+                2:'Monday',
+                3:'Tuesday',
+                4:'Wednesday',
+                5:'Thursday',
+                6:'Friday',
+                7:'Saturday'
+             }
+        return switcher.get(i,"Invalid day of week")
+a= int(input())
+print(week(a))
+
+# print total number of days in a month using switch case        
+def days(i):
+        switcher={
+                1:'31 days',
+                2:'29 and 28 days',
+                3:'31 days',
+                4:'30 days',
+                5:'31 days',
+                6:'30 days',
+                7:'31 days',
+                8:'30 days',
+                9:'31 days',
+                10:'30 days',
+                11:'31 days',
+                12:'30 days'
+             }
+        return switcher.get(i,"Invalid month")
+a= int(input("enter the in number:"))
+print(days(a))
+
+# check whether an alphabet is vowel or consonant using switch case. 
+def letter(n):
+        switcher={
+                'a':'vowel',
+                'e':'vowel',
+                'i':'vowel',
+                'o':'vowel',
+                'u':'vowel'
+             }
+        return switcher.get(n,"consonant")
+b= str(input("enter the in letter:").lower())
+print(letter(b))
+
+# print all natural numbers from 1 to n. - using while loop 
+num = int(input("Please Enter any Number: "))
+i = 1
+while ( i <= num):
+    print (i, end = '  ')
+    i = i + 1
+
+# print all natural numbers in reverse (from n to 1). - using while loop 
+num = int(input("Please Enter any Number: "))
+i = num 
+while ( i >= 1):
+    print (i, end = '  ')
+    i = i - 1
+
+#  print all even numbers between 1 to 100. - using while loop
+x=1
+y=100
+for i in range(x,y):
+    if(i%2==0):
+        print(i,end=" ")    
+
+# print all odd number between 1 to 100
+x=1
+y=100
+for i in range(x,y):
+    if(i%2!=0):
+        print(i,end=" ")   
+
+# find sum of all natural numbers between 1 to n
+n = int(input("Enter Number to calculate sum"))
+sum = 0
+for num in range(0,n+1,1):
+    sum = sum+num
+print(sum)
+
+# find sum of all even numbers between 1 to n.
+n = int(input(" Please Enter the Maximum Value : "))
+sum = 0
+for i in range(1, n+1):
+    if(i % 2 == 0):
+        sum = sum + i
+print(sum)
+
+# find sum of all odd numbers between 1 to n. 
+n = int(input(" Please Enter the Maximum Value : "))
+sum = 0
+for i in range(1, n+1):
+    if(i % 2 != 0):
+        sum = sum + i
+print(sum)
+
+#  print multiplication table of any number
+n=int(input())
+for i in range (1,10+1):
+  print(n,"x",i,"=",n*i)
+
+# count number of digits in a number.
+n=int(input())
+count=0
+while(n>0):
+    count=count+1
+    n=n//10
+print(count)
